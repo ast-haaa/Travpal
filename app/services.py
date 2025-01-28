@@ -4,12 +4,17 @@ import openai
 # OpenAI API Key (Replace with your actual key)
 openai.api_key = "YOUR_OPENAI_API_KEY"
 
-# Translator Service
+# Get Supported Languages
 def get_supported_languages():
     return GoogleTranslator().get_supported_languages()
 
+# Translate Text
 def translate_text(text, target_lang="en"):
-    return GoogleTranslator(source='auto', target=target_lang).translate(text)
+    try:
+        translated = GoogleTranslator(source='auto', target=target_lang).translate(text)
+        return translated
+    except Exception as e:
+        return f"Error during translation: {str(e)}"
 
 # Chatbot Service
 def chatbot_response(user_input):
