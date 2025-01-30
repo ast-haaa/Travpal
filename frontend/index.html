@@ -10,6 +10,29 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>travpal</title>
+    <style>
+      /* Adjust the width of the Google Translate dropdown */
+#google_translate_element select {
+    width: auto; /* Allows the dropdown to adjust its width based on content */
+    min-width: 150px; /* Sets a minimum width */
+    padding: 5px; /* Adds padding for better appearance */
+    font-size: 14px; /* Adjusts font size */
+}
+
+/* Optional: Customize the appearance of the dropdown */
+#google_translate_element select {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+}
+
+/* Optional: Customize the appearance of the dropdown options */
+#google_translate_element select option {
+    color: #333;
+}
+    </style>
+
   </head>
   <body>
     <header id="home">
@@ -23,8 +46,23 @@
             <li class="link"><a href="#blog">Explore</a></li>
             <li class="link"><a href="#gallery">Gallery</a></li>
             <li class="footer__link"><a href="signup.html">Signup/Login</a></li>
-            
             <li class="link"><a href="#contact">Contact</a></li>
+            <li class="link">Language/भाषा
+              <div id="google_translate_element"></div>
+            </li>
+            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <script type="text/javascript">
+              function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                  pageLanguage: 'en',
+                  includedLanguages: 'af,sq,am,ar,hy,as,ay,az,bm,eu,be,bn,bho,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,dv,dog,nl,en,eo,et,ee,tl,fi,fr,fy,gl,ka,de,el,gn,gu,ht,ha,haw,he,hi,hmn,hu,is,ig,ilo,id,ga,it,ja,jv,kn,kk,km,rw,kok,ko,kri,ku,kmr,ky,lo,la,lv,ln,lt,lg,lb,mk,mai,mg,ms,ml,mt,mi,mr,mni,mzr,mn,my,ne,no,or,om,ps,fa,pl,pt,pa,qu,ro,ru,sm,sa,gd,nso,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tg,ta,tt,te,th,ti,ts,tr,tk,tw,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu',
+                  layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+              }
+              loadGoogleTranslate();
+              </script>
+          </ul>
+        
            
           </ul>
         </div>
