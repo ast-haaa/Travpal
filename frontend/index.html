@@ -11,15 +11,15 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>travpal</title>
     <style>
-      /* Adjust the width of the Google Translate dropdown */
+      
 #google_translate_element select {
-    width: auto; /* Allows the dropdown to adjust its width based on content */
-    min-width: 150px; /* Sets a minimum width */
-    padding: 5px; /* Adds padding for better appearance */
-    font-size: 14px; /* Adjusts font size */
+    width: auto; 
+    min-width: 150px;
+    padding: 5px;
+    font-size: 14px; 
 }
 
-/* Optional: Customize the appearance of the dropdown */
+
 #google_translate_element select {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -27,7 +27,6 @@
     color: #333;
 }
 
-/* Optional: Customize the appearance of the dropdown options */
 #google_translate_element select option {
     color: #333;
 }
@@ -41,14 +40,11 @@
           <div class="nav__logo"><a href="#">Travpal.</a></div>
           <ul class="nav__links">
             <li class="link"><a href="#home">Home</a></li>
-            <li class="link"><a href="#about">About Us</a></li>
-            <li class="link"><a href="#discover">Discover</a></li>
-            <li class="link"><a href="#blog">Explore</a></li>
-            <li class="link"><a href="#gallery">Gallery</a></li>
-            <li class="footer__link"><a href="signup.html">Signup/Login</a></li>
-            <li class="link"><a href="#contact">Contact</a></li>
+            <li class="link"><a href="#about">About Us</a></li> 
+            <li class="link"><a href="#contact">Chatbot</a></li>           
+            <li class="footer__link"><a href="signup.html">Signup/Login</a></li>            
             <li class="link">Language/भाषा
-              <div id="google_translate_element"></div>
+            <div id="google_translate_element"></div>
             </li>
             <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             <script type="text/javascript">
@@ -70,39 +66,15 @@
       <div class="section__container header__container">
         <h1>The new way to plan your next adventure</h1>
         <h4>Explore the colourful world</h4>
-        <button class="btn">
-          Explore More <i class="ri-arrow-right-line"></i>
-        </button>
+        <a href="signup.html">
+          <button class="btn">
+            Explore More <i class="ri-arrow-right-line"></i>
+          </button>
+        </a>
+        
       </div>
     </header>
-
-    <div id="bp-chat-container">
-      <iframe src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/27/13/20250127130209-PCWHPWT4.json"
-      style="width:100%; height:100%; border:none;">
-</iframe>
-    </div>
-
-   
-    <button id="chat-button">💬</button>
-  
     
-    <script>
-      
-      
-  
-    
-      document.getElementById('chat-button').addEventListener('click', function() {
-        const chatContainer = document.getElementById('bp-chat-container');
-        chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
-  
-      
-        window.botpressWebChat.toggle();
-      });
-    </script>
- 
-    
-  
-
     <section class="about" id="about">
       <div class="section__container about__container">
         <div class="about__content">
@@ -116,165 +88,27 @@
         </div>
       </div>
     </section>
-
-    <section class="discover" id="discover">
-      <div class="section__container discover__container">
-        <h2 class="section__header">Discover the most engaging places</h2>
-        <p class="section__subheader">
-          Let's see the world with us with you and your family.
-        </p>
-        <div class="discover__grid">
-          <div class="discover__card">
-            <div class="discover__image">
-              <img src="assets/loc1.jpg" alt="discover" />
-            </div>
-            <div class="discover__card__content">
-              <h4>Hawa Mahal</h4>
-              <p>
-                Situated at Badi Choupad, Pink City of Jaipur, Hawa Mahal was built in 1799. It has 953 windows on the outside walls. The honeycomb shaped and beautifully carved windows allow breeze to blow through the palace and makes it a perfect summer palace.
-              </p>
-              <a href="https://www.hawa-mahal.com/" target="_blank">
-                <button class="discover__btn">
-                  Discover More <i class="ri-arrow-right-line"></i>
-                </button>
-              </a>
-              
-            </div>
-          </div>
-          <div class="discover__card">
-            <div class="discover__image">
-              <img src="assets/loc2.jpg" alt="discover" />
-            </div>
-            <div class="discover__card__content">
-              <h4>Kapaleeshwarar Temple</h4>
-              <p>
-                The temple is also known as Vedapuri as the four Vedas are worshipped at this auspicious place. The other name given to the religious site is Sukrapuri as Sage Sukracharya offered his prayers to Lord Shiva at this location to regain his eyesight.
-              </p>
-              <a href="https://www.tamilnadutourism.tn.gov.in/destinations/the-kapaleeshwarar-temple">
-                <button class="discover__btn">
-                  Discover More <i class="ri-arrow-right-line"></i>
-                </button>
-              </a>
-              
-            </div>
-          </div>
-          <div class="discover__card">
-            <div class="discover__image">
-              <img src="assets/loc3.jpg" alt="discover" />
-            </div>
-            <div class="discover__card__content">
-              <h4>Taj Mahal</h4>
-              <p>
-                The Taj Mahal, located in Agra, Uttar Pradesh, is a stunning white marble mausoleum built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal, who died in 1631. It stands as an iconic symbol of India's history and architectural beauty.
-              </p>
-              <a href="https://www.tajmahal.gov.in/"></a>
-              <button class="discover__btn">
-                Discover More <i class="ri-arrow-right-line"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="blogs" id="blog">
-      <div class="blogs__container">
-        <h2 class="section__header">Explore India</h2>
-        <p class="section__subheader">We want to help youto travel better!</p>
-        <div class="blogs__grid">
-          <div class="blogs__card">
-            <img src="assets/loc4.jpg" alt="blog" />
-            <div class="blogs__content">
-              Jaipur
-            </div>
-          </div>
-          <div class="blogs__card">
-            <img src="assets/loc5.jpg" alt="blog" />
-            <div class="blogs__content">
-             Mumbai
-            </div>
-          </div>
-          <div class="blogs__card">
-            <img src="assets/loc6.jpg" alt="blog" />
-            <div class="blogs__content">
-              Tamil Nadu
-            </div>
-          </div>
-          <div class="blogs__card">
-            <img src="assets/loc7.jpg" alt="blog" />
-            <div class="blogs__content">
-              Kashmir
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-   
-
+    
+    
     <section class="hero">
       <div class="section__container hero__container">
         <p>Travpal.</p>
       </div>
     </section>
-
-    <section class="gallery" id="gallery">
-      <div class="gallery__container">
-        <h2 class="section__header">Gallery photos</h2>
-        <p class="section__subheader">
-          Explore the most beautiful places in the world.
-        </p>
-        <div class="gallery__grid">
-          <div class="gallery__card">
-            <img src="assets/loc8.jpg" alt="gallery" />
-            <div class="gallery__content">
-              <h4>Odisha</h4>
-             
-            </div>
-          </div>
-          <div class="gallery__card">
-            <img src="assets/loc9.jpg" alt="gallery" />
-            <div class="gallery__content">
-              <h4>Goa</h4>
-              
-            </div>
-          </div>
-          <div class="gallery__card">
-            <img src="assets/loc10.jpg" alt="gallery" />
-            <div class="gallery__content">
-              <h4>Odisha</h4>              
-            </div>
-          </div>
-          <div class="gallery__card">
-            <img src="assets/loc11.jpg" alt="gallery" />
-            <div class="gallery__content">
-              <h4>Jammu</h4>
-             </div>
-          </div>
-          <div class="gallery__card">
-            <img src="assets/gallery-5.jpg" alt="gallery" />
-            <div class="gallery__content">
-              <h4>Kerela</h4>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="contact" id="contact">
       <div class="section__container contact__container">
         <div class="contact__col">
-          <h4>Need help planning your next adventure? Chat with us now for real-time assistance</h4>
+          <h4>Need help planning your next adventure? Chat with 'Travpal Chatbot' now for real-time assistance</h4>
         </div>
         <div class="contact__col">
+        <a href="signup.html">
           <div class="contact__card">
             <span><i class="ri-phone-line"></i></span>
-            <h4>Call us</h4>
-            <h5>+91 987654XXXX</h5>
-            <p>We are online now</p>
-          </div>
-        </div>
+            <h4>Access Chatbot!</h4>
+          </div></a>
+        </div>         
         <div class="contact__col">
           <div class="contact__card">
             <span><i class="ri-mail-line"></i></span>
@@ -308,11 +142,9 @@
         <ul class="footer__nav">
           <li class="footer__link"><a href="#home">Home</a></li>
           <li class="footer__link"><a href="#about">About</a></li>
-          <li class="footer__link"><a href="#discover">Discover</a></li>
-          <li class="footer__link"><a href="#blog">Explore</a></li>
-          <li class="footer__link"><a href="#gallery">Gallery</a></li>
+          
           <li class="footer__link"><a href="signup.html">Signup/Login</a></li>
-          <li class="footer__link"><a href="#contact">Contact</a></li>
+          <li class="footer__link"><a href="#contact">Chatbot</a></li>
         </ul>
       </div>
       <div class="footer__bar">

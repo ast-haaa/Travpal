@@ -63,7 +63,9 @@
     outline: 2px solid var(--secondary-color);
   }
   
-  .btn {
+  .btn{
+    margin-left: 42%;
+    margin-top: 7px;
     background-color: var(--secondary-color);
     color: var(--white);
     padding: 12px;
